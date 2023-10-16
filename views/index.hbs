@@ -1,0 +1,34 @@
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html" id="logo"><span>OOO</span>Rider</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/car"><i class="fa-solid fa-house"></i>HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/car/cart"><i class="fa-solid fa-cart-shopping">Cart</i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="car/list"><i class="fa-solid fa-list"></i>LIST</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="car/add"><i class="fa-solid fa-right-to-bracket"></i>add</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="text" placeholder="Search">
+                <button class="btn btn-primary" type="button">Search</button>
+            </form>
+        </div>
+    </div>
+
+</nav>
+<!-- Navbar End -->
+{{#each data }}
+<h1>{{ name }}</h1>
+{{/each}}

@@ -1,0 +1,56 @@
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="/cars" id="logo"><span>Car</span>Toy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/cars"><i class="fa-solid fa-house"></i>HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cars/cart"><i class="fa-solid fa-cart-shopping">Cart</i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cars/list"><i class="fa-solid fa-list"></i>LIST</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cars/add"><i class="fa-solid fa-right-to-bracket"></i>add</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="text" placeholder="Search">
+                <button class="btn btn-primary" type="button">Search</button>
+            </form>
+        </div>
+    </div>
+
+</nav>
+<!-- Navbar End -->
+<section class="packages" id="packages">
+    
+            {{#each data }}
+            <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <a href="products/show/{{_id}}">
+                        <img width="300" height="300" src="{{image}}" alt="{{_id}}">
+                    </a>
+                    <div class="card-body">
+                        <h3 class="fw-bolder">{{ title }}</h3>
+                        <p>{{name}}</p>
+                        <h6>Price: $<strong>{{price}}</strong></h6>
+                        <h5>{{quantity}}</h5>
+                        {{!-- <form action="products/cart" method="post"> --}}
+                            {{!--
+                        </form> --}}
+                    </div>
+                    <button type="submit" class="btn btn-warning col-5 m-2">Add to
+                        cart</button>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
